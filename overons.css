@@ -1,10 +1,12 @@
-/* Algemene opmaak */
+
 body, h1, h2, p, ul {
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Amiko", serif;
+  font-weight: 400;
+  
   color: white;
   line-height: 1.6;
   background-color: #363333;
@@ -26,19 +28,19 @@ header {
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  background-color: #222;
+ 
   color: #fff;
   padding: 10px 20px;
-  position: relative; /* Houd ruimte voor absoluut gepositioneerde kinderen */
+  position: relative; 
 }
 
 .menu-icon {
-  margin-left: auto; /* Duw de menu-icon helemaal naar rechts */
+  margin-left: auto; 
   display: flex;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  z-index: 10; /* Zorg dat de menu-icon boven het menu blijft */
+  z-index: 10; 
 }
 
 
@@ -51,55 +53,56 @@ header {
 }
 
 header nav ul {
-  display: none; /* Verberg het menu standaard */
+  display: none; 
   flex-direction: column;
   gap: 10px;
-  background-color: #222;
   position: absolute;
-  top: 60px;
+  top: 40px;
   left: 0;
   width: 100%;
   padding: 10px 0;
-  text-align: center;
+ text-align: end;
+
+  
 }
 
 #menu-toggle:checked + .menu-icon + nav ul {
   display: flex;
 }
 
-/* Over Ons Section */
 .over-ons {
-  padding: 20px;
+  padding: 40px;
 }
 .over-ons h1 {
   font-size: 2rem;
 }
 .over-ons h2 {
   margin: 10px 0;
-  color: #48b7c6;
+
 }
 .over-ons p {
   margin-bottom: 10px;
 }
 
-/* QR-section */
+
 .qr-section {
   padding: 20px;
-  text-align: center;
   background-color: #48b7c6;
   color: #fff;
+  text-align: center;
+  
 }
-.qr-code img {
+.qr-section img {
   margin-top: 10px;
   width: 150px;
+  
 }
 
-/* Funventures Section */
 .funventures {
-  padding: 20px;
+  padding: 40px;
 }
 .funventures h2 {
-  text-align: center;
+  
   margin-bottom: 10px;
 }
 .funventures ul {
@@ -111,46 +114,45 @@ header nav ul {
   margin-top: 20px;
 }
 
-/* Missie & Visie */
+
 .missie-visie {
   padding: 20px;
-  text-align: center;
+  
 }
 .cta-button {
   background-color: #d63384;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 20px 30px;
+  border-radius: 20px;
   cursor: pointer;
   margin-top: 10px;
+  font-size: 20px;
+ 
 }
 
 /* Footer */
 footer {
   background-color: #0464A0;
   color: #fff;
-  padding: 20px;
-  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  
 }
 
-footer .footer-links,
-footer .social-media {
-  margin-bottom: 20px;
-}
 .footer-logo img {
   width: 150px;
   margin-top: 10px;
 }
+
 input[type="checkbox"] {
   display: none;
 }
 
-
-/* ====== MEDIA QUERY: Desktop ====== */
 @media (min-width: 768px) {
   header {
-    flex-direction: row; /* Zet logo links en menu rechts */
+    flex-direction: row;
     justify-content: space-between;
     padding: 10px 20px;
   }
@@ -160,14 +162,14 @@ input[type="checkbox"] {
   }
 
   header nav ul {
-    display: flex; /* Toon menu standaard */
+    display: flex;
     flex-direction: row;
-    position: static; /* Reset positie */
+    position: static; 
     background: none;
     gap: 20px;
   }
 
-  /* QR-section */
+
   .qr-section {
     display: flex;
     justify-content: space-between;
@@ -179,13 +181,12 @@ input[type="checkbox"] {
     margin: 0;
   }
 
-  /* Funventures Section */
   .funventures {
     max-width: 1200px;
     margin: 0 auto;
   }
 
-  /* Footer */
+ 
   footer {
     display: flex;
     justify-content: space-around;
